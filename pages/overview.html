@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./../icons/bugJsLogo.png">
+    <link rel="stylesheet" href="../css/overview.css">
+
+    <title>BugJS - Overview </title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="./../icons/bugJsLogo.png" alt="logotipo do Bug Js">
+            </div>
+            <nav>
+                <!-- <a href="../index.html"></a> -->
+                <!-- aqui vai o btn para fazer um post, ver o meu perfil etc -->
+                <div class="btn_nav" title="Criar post">
+                    <a href="./newPost.html">
+                        <img src="./../icons/mais.png" alt="">
+                    </a>
+                </div>
+                <div class="btn_nav">
+                    <img src="./../icons/sombra-de-usuario-masculino.png" alt="">
+                    <!-- aqui sera para terminar sessao e ver as info do perfil, quantos posts tem -->
+
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container_bugs">
+                <div class="container_search">
+                    <input type="search" placeholder="Pesquise por um erro"> <button>Pesquisar</button>
+                </div>
+
+                <div class="container_bugs_posts">
+                    <div class="header_posts">
+                        <h5>Erro</h5>
+                        <h5>Código</h5>
+                        <h5>Descrição</h5>
+                        <h5>Solução</h5>
+                    </div>
+
+
+                    <div class="container_row_post">
+
+                        <div class="row_post">
+                            <p>Cannot read property 'x' of undefined</p>
+                            <p class="color_error">ERR001</p>
+                            <p>Erro ocorre ao tentar acessar uma propriedade de um objeto nulo.</p>
+                            <p>Verificar se o objeto está definido antes de acessar a propriedade.</p>
+                        </div>
+
+                        <div class="bug_details">
+                            <h1>Detalhes do Bug</h1>
+                            <p><strong>Erro:</strong> Cannot read property 'x' of undefined</p>
+                            <p><strong>Código:</strong> ERR001</p>
+                            <p><strong>Publicado por:</strong> Desenvolvedor Exemplo</p>
+
+
+                            <h1><strong>Projeto Node.js Automatizado</strong></h1>
+                            <p>Este projeto automatiza a criação de uma estrutura de servidor Node.js com Express,
+                                configurando pastas, arquivos, e dependências essenciais de forma automática.</p>
+                            <hr>
+                            <h2><strong>Pré-requisitos</strong></h2>
+                            <p>Certifique-se de ter as seguintes ferramentas instaladas:</p>
+                            <ul>
+                                <li><a href="https://nodejs.org/">Node.js</a> (versão 14 ou superior)</li>
+                                <li><a href="https://www.npmjs.com/">npm</a> (instalado junto com o Node.js)</li>
+                            </ul>
+                            <hr>
+                            <h2><strong>Como usar</strong></h2>
+                            <h3><strong>1. Clone ou copie o projeto</strong></h3>
+                            <pre><code class="language-bash">git clone &lt;url_do_repositorio&gt;
+cd &lt;nome_do_projeto&gt;
+</code></pre>
+                            <h3><strong>2. Execute o script inicial</strong></h3>
+                            <p>No terminal, execute:</p>
+                            <pre><code class="language-bash">node app.js
+</code></pre>
+                            <p>Esse comando criará automaticamente a estrutura do projeto, arquivos iniciais e instalará
+                                as dependências.</p>
+                            <hr>
+                            <h2><strong>Estrutura do Projeto</strong></h2>
+                            <p>Após rodar o script, a seguinte estrutura será gerada:</p>
+                            <pre><code>.
+├── .gitignore
+├── ormConfig.js
+├── package.json
+├── src
+│   ├── config
+│   ├── database
+│   │   └── migrations
+│   ├── error
+│   │   └── AppError.js
+│   ├── middlewares
+│   ├── modules
+│   │   └── exempleAccounts
+│   │       ├── dtos
+│   │       ├── entities
+│   │       ├── repositories
+│   │       └── useCases
+│   ├── routes
+│   │   └── index.js
+│   ├── server.js
+│   ├── utils
+└── .env
+</code></pre>
+                            <hr>
+                            <h2><strong>Configurações</strong></h2>
+                            <h3><strong>1. Configurar variáveis de ambiente</strong></h3>
+                            <p>Edite o arquivo <code>.env</code> com as informações do banco de dados:</p>
+                            <pre><code class="language-env">TYPEORM_CONNECTION=postgres
+TYPEORM_PORT=5432
+TYPEORM_DATABASE=nome_do_banco
+TYPEORM_HOST=localhost
+TYPEORM_USERNAME=usuario
+TYPEORM_PASSWORD=senha
+TYPEORM_MIGRATIONS=./src/database/migrations
+TYPEORM_ENTITIES=./src/modules/exempleAccounts/entities/*.ts
+</code></pre>
+                            <h3><strong>2. Configurar o TypeORM</strong></h3>
+                            <p>O arquivo <code>ormConfig.js</code> é gerado automaticamente com a seguinte configurações
+                                padrão:</p>
+                            <pre><code class="language-javascript">import &quot;reflect-metadata&quot;
+import { DataSource } from &quot;typeorm&quot;
+
+export const AppDataSource = new DataSource({
+    type: &quot;postgres&quot;,
+    host: &quot;localhost&quot;,
+    port: 5432,
+    username: &quot;usuario&quot;,
+    password: &quot;senha&quot;,
+    database: &quot;nome_do_banco&quot;,
+    entities: [&quot;./src/modules/exempleAccounts/entities/*.ts&quot;],
+    migrations: [&quot;./src/database/migrations/*.ts&quot;],
+    synchronize: true,
+})
+
+AppDataSource.initialize()
+    .then(() =&gt; console.log(&quot;Data source inicializado&quot;))
+</code></pre>
+                            <hr>
+                            <h2><strong>Comandos Disponí­veis</strong></h2>
+                            <h3><strong>Iniciar o servidor</strong></h3>
+                            <p>Para iniciar o servidor com recarregamento automático: </p>
+                            <pre><code class="language-bash">npm run dev
+</code></pre>
+                            <hr>
+                            <h2><strong>Endpoints</strong></h2>
+                            <h3><strong>GET /</strong></h3>
+                            <p>Rota principal que retorna uma mensagem de boas-vindas:</p>
+                            <ul>
+                                <li><strong>URL:</strong> <code>http://localhost:2908/</code></li>
+                                <li><strong>Resposta:</strong>
+                                    <pre><code class="language-json">{
+    &quot;message&quot;: &quot;Hello World&quot;,
+    &quot;statusCode&quot;: 200
+}
+</code></pre>
+                                </li>
+                            </ul>
+                            <hr>
+                            <h3><strong>Porta em uso</strong></h3>
+                            <p>Se a porta <code>2908</code> estiver em uso, altere-a no arquivo
+                                <code>src/server.js</code>:
+                            </p>
+                            <pre><code class="language-javascript">app.listen(3000, &quot;localhost&quot;, () =&gt; console.table({ URL: &quot;http://localhost:3000/&quot; }));
+</code></pre>
+                            <h3><strong>Author</strong></h3>
+                            <p> <a href="https://bernardinoleite.netlify.app">Bernardino Leite</a> </p>
+                            <img src="https://bernardinoleite.netlify.app/perfil.JPG" width="100">
+
+                        </div>
+
+                    </div>
+
+                    <div class="container_row_post">
+                        <div class="row_post">
+                            <p>Unexpected token</p>
+                            <p class="color_error">ERR002</p>
+                            <p>Sintaxe inválida no arquivo JavaScript.</p>
+                            <p>Corrigir a sintaxe no código conforme a especificação.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="container_row_post">
+
+                        <div class="row_post">
+                            <p>Cannot read property 'x' of undefined</p>
+                            <p class="color_error">ERR001</p>
+                            <p>Erro ocorre ao tentar acessar uma propriedade de um objeto nulo.</p>
+                            <p>Verificar se o objeto está definido antes de acessar a propriedade.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../js/homeController.js"></script>
+</body>
+
+</html>
