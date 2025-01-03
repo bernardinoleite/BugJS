@@ -136,11 +136,12 @@ main form {
 main form .container_inputs input {
     width: 100%;
     padding: 8px;
-    color: #1e1e2f;
+    color: #aaa;
     border-radius: 4px;
     border: none;
     margin-bottom: 4px;
     outline: none;
+    background-color: var(--input-color);
 }
 
 main form .container_inputs [type="submit"] {
