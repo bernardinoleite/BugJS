@@ -1,0 +1,32 @@
+{
+  "name": "bugjs",
+  "version": "1.0.0",
+  "description": "Este é um projecto voltado a bugs em javascript, com objectivo de ajudar os dev a localizarem  e corrigirem os seus bugs no ecossitema js",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bernardinoleite/BugJS"
+  },
+  "bugs": "https://github.com/bernardinoleite/BugJS/issues",
+  "keywords": [],
+  "author": {
+    "name": "Bernardino Leite",
+    "email": "bernardinoleite2008@gmail.com",
+    "url": "https://github.com/bernardinoleite"
+  },
+  "contributors": [],
+  "scripts": {
+    "dev": "",
+    "test": ""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
