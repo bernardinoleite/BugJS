@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./../icons/bugJsLogo.png">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>BugJS - Administrador</title>
+</head>
+
+<body>
+
+    <div class="modal_editar_user hide">
+
+
+        <form action="">
+            <div class="container_avatar">
+                <div class="fake_input_file">
+                    <img src="../icons/sombra-de-usuario-masculino.png" alt="">
+                    <div class="filter_fake_input_file">
+                        <h5>Adicionar Foto</h5>
+                    </div>
+                </div>
+                <input type="file" name="" class="hide" id="">
+            </div>
+            <div class="container_inputs">
+
+                <input type="text" name="" id="" placeholder="Digite o novo Nome de Usuario">
+
+                <input type="email" name="" id="" placeholder="Digite o novo email">
+
+                <input type="password" name="" id="" placeholder="Digite a nova senha">
+
+                <input type="password" name="" id="" placeholder="Confirme a nova senha">
+
+                <input type="submit" value="Atualizar Dados">
+                <input type="submit" value="Cancelar" class="cancelar_red">
+
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="./../icons/bugJsLogo.png" alt="logotipo do Bug Js">
+            </div>
+            <nav>
+                <div class="btn_nav">
+                    <img src="./../icons/sombra-de-usuario-masculino.png" alt="">
+
+                    <!-- aqui sera para terminar sessao e ver as info do perfil, quantos posts tem -->
+                </div>
+                <div class="menu_drop hide">
+
+                    <div class="option_menu_drop">Ver Perfil</div>
+                    <div class="option_menu_drop">Terminar Sessão</div>
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+
+            <div class="container_dash">
+                <div class="container_dados">
+                    <div class="card_dados">
+                        <h5>4</h5>
+                        <p>Usuarios Cadastrados</p>
+                    </div>
+                    <div class="card_dados">
+                        <h5>11</h5>
+                        <p>Post Publicados</p>
+                    </div>
+                </div>
+
+                <h2>Seus Posts</h2>
+
+                <div class="container_all_users">
+
+                    <div class="header_users">
+                        <h5>Avatar</h5>
+                        <h5>Usuario</h5>
+                        <h5>Email</h5>
+                        <h5>Posts</h5>
+                        <h5>Ações</h5>
+                    </div>
+
+                    <div class="container_row_users">
+
+                        <div class="row_user">
+                            <div class="avatar_user">
+                                <img src="../icons/sombra-de-usuario-masculino.png" alt="">
+                            </div>
+
+                            <p>Bernardino Leite</p>
+                            <p>bernardinoleite2008@gmail.com</p>
+                            <p>4</p>
+                            <div class="acoes">
+                                <div class="btn_acoes editar">
+                                    <img src="../icons/pencil.png" alt="">
+                                </div>
+                                <div class="btn_acoes apagar">
+                                    <img src="../icons/bin.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+    <script src="./../js/admin.js"></script>
+</body>
+
+</html>
