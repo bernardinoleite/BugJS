@@ -60,13 +60,11 @@ header nav {
     width: max-content;
     height: max-content;
     padding: 10px 0px;
-}
-
-
-header nav {
     display: flex;
     gap: 14px;
     align-items: center;
+    position: relative;
+    z-index: 122;
 }
 
 .btn_nav {
@@ -160,6 +158,7 @@ main {
     top: 10px;
     right: 10px;
     padding: 2px;
+    cursor: pointer;
 }
 
 .btn_editar img {
@@ -328,6 +327,228 @@ main {
 .bug_details a {
     color: blue;
 }
+
+.menu_drop {
+    padding: 10px;
+    background-color: var(--body-color);
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    border-radius: 8px;
+    bottom: -70px;
+    right: -14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: var(--box-shadow-color);
+}
+
+
+
+
+.option_menu_drop {
+    color: #aaa;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option_menu_drop a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.modal_editar_user {
+    background-color: #1e1e2fc9;
+    text-align: justify;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.modal_editar_post {
+    background-color: #1e1e2fc9;
+    text-align: justify;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.modal_editar_post form {
+    background-color: var(--body-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    height: 60%;
+    box-shadow: var(--box-shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal_editar_post form input {
+    padding: 8px;
+    width: 50%;
+    background-color: #1e1e2f;
+    border: none;
+    color: #aaa;
+    outline: none;
+    border-radius: 4px;
+}
+
+.container_input {
+    width: 100%;
+    display: flex;
+    gap: 4px;
+}
+
+.modal_editar_post form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #1e1e2f;
+    border: none;
+    color: #aaa;
+    outline: none;
+}
+
+.modal_editar_post form input {
+    width: 100%;
+    padding: 8px;
+}
+
+.modal_editar_post form input[type="submit"] {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+[type="submit"].red {
+    background-color: #770808de;
+}
+
+
+
+
+
+
+
+
+
+
+
+.modal_editar_user form {
+    width: 50%;
+    height: 55%;
+    background-color: var(--form-color);
+    border-radius: 8px;
+    display: flex;
+    box-shadow: var(--box-shadow-color);
+}
+
+.modal_editar_user .container_inputs,
+.modal_editar_user .container_avatar {
+    flex: 1 1 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal_editar_user .container_avatar {
+    background-color: var(--bg-color);
+    color: #aaa;
+    align-items: center;
+}
+
+.fake_input_file {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.filter_fake_input_file {
+    background-color: #1e1e2ffa;
+    text-align: justify;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fake_input_file img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal_editar_user form .container_inputs input {
+    width: 100%;
+    padding: 8px;
+    color: #aaa;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 4px;
+    outline: none;
+    background-color: var(--input-color);
+}
+
+.modal_editar_user form .container_inputs [type="submit"] {
+    background-color: #1e1e2f;
+    color: white;
+    font-weight: 600;
+}
+
+.modal_editar_user form .container_inputs [type="submit"]:hover {
+    cursor: pointer;
+}
+
+.modal_editar_user form .container_inputs .cancelar_red {
+    background-color: #770808de;
+}
+
 
 .hide {
     display: none;

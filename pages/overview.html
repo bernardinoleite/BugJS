@@ -14,7 +14,9 @@
     <div class="container">
         <header>
             <div class="logo">
-                <img src="./../icons/bugJsLogo.png" alt="logotipo do Bug Js">
+                <a href="./overview.html">
+                    <img src="./../icons/bugJsLogo.png" alt="logotipo do Bug Js">
+                </a>
             </div>
             <nav>
                 <!-- <a href="../index.html"></a> -->
@@ -24,10 +26,17 @@
                         <img src="./../icons/mais.png" alt="">
                     </a>
                 </div>
-                <div class="btn_nav">
+                <div class="btn_nav btn_nav_perfil">
                     <img src="./../icons/sombra-de-usuario-masculino.png" alt="">
                     <!-- aqui sera para terminar sessao e ver as info do perfil, quantos posts tem -->
 
+                </div>
+                <div class="menu_drop hide">
+
+                    <div class="option_menu_drop">
+                        <a href="./perfil.html">Ver Perfil</a>
+                    </div>
+                    <div class="option_menu_drop">Terminar Sessão</div>
                 </div>
             </nav>
         </header>
@@ -56,7 +65,7 @@
                             <p>Verificar se o objeto está definido antes de acessar a propriedade.</p>
                         </div>
 
-                        <div class="bug_details">
+                        <div class="bug_details hide">
                             <h1>Detalhes do Bug</h1>
                             <p><strong>Erro:</strong> Cannot read property 'x' of undefined</p>
                             <p><strong>Código:</strong> ERR001</p>
@@ -179,27 +188,6 @@ AppDataSource.initialize()
                         </div>
 
                     </div>
-
-                    <div class="container_row_post">
-                        <div class="row_post">
-                            <p>Unexpected token</p>
-                            <p class="color_error">ERR002</p>
-                            <p>Sintaxe inválida no arquivo JavaScript.</p>
-                            <p>Corrigir a sintaxe no código conforme a especificação.</p>
-
-                        </div>
-                    </div>
-
-                    <div class="container_row_post">
-
-                        <div class="row_post">
-                            <p>Cannot read property 'x' of undefined</p>
-                            <p class="color_error">ERR001</p>
-                            <p>Erro ocorre ao tentar acessar uma propriedade de um objeto nulo.</p>
-                            <p>Verificar se o objeto está definido antes de acessar a propriedade.</p>
-                        </div>
-                    </div>
-
 
                 </div>
             </div>

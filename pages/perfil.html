@@ -6,20 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./../icons/bugJsLogo.png">
     <link rel="stylesheet" href="../css/perfil.css">
+    <script src="../js/perfilController.js" defer></script>
 
     <title>BugJS - Perfil </title>
 </head>
 
 <body>
+
+    <div class="modal_editar_user hide">
+
+
+        <form action="">
+            <div class="container_avatar">
+                <div class="fake_input_file">
+                    <img src="../icons/sombra-de-usuario-masculino.png" alt="">
+                    <div class="filter_fake_input_file">
+                        <h5>Adicionar Foto</h5>
+                    </div>
+                </div>
+                <input type="file" name="avatar" class="hide input_avatar">
+            </div>
+            <div class="container_inputs">
+
+                <input type="text" name="user" placeholder="Digite o novo Nome de Usuario">
+
+                <input type="email" name="email" placeholder="Digite o novo email">
+
+                <input type="password" name="password" placeholder="Digite a nova senha">
+
+                <input type="password" name="confirmPassword" placeholder="Confirme a nova senha">
+
+                <input type="submit" value="Atualizar Dados" class="btn_atualizar">
+                <input type="submit" value="Cancelar" class="cancelar_red">
+
+            </div>
+        </form>
+
+    </div>
+    <div class="modal_editar_post hide">
+        <form action="">
+            <div class="container_input">
+                <input type="text" name="" id="" placeholder="Erro">
+                <input type="text" name="" id="" placeholder="Codigo">
+            </div>
+            <textarea name="" id="" placeholder="Descrição do erro"></textarea>
+            <textarea name="" id="" placeholder="Solução"></textarea>
+            <input type="file" name="" id="">
+            <input type="submit" value="Salvar Alterações">
+            <input type="submit" value="Cancelar" class="red btn_cancelar">
+        </form>
+
+    </div>
     <div class="container">
         <header>
             <div class="logo">
-                <img src="./../icons/bugJsLogo.png" alt="logotipo do Bug Js">
+                <a href="./overview.html">
+                    <img src="./../icons/bugJsLogo.png" alt="logotipo do Bug Js">
+                </a>
             </div>
             <nav>
                 <div class="btn_nav">
                     <img src="./../icons/sombra-de-usuario-masculino.png" alt="">
                     <!-- aqui sera para terminar sessao e ver as info do perfil, quantos posts tem -->
+                </div>
+                <div class="menu_drop hide">
+                    <div class="option_menu_drop">Terminar Sessão</div>
                 </div>
             </nav>
         </header>
